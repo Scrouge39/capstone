@@ -223,7 +223,6 @@ if menu_id == "Marketing Analytics":
             st.plotly_chart(fig)
 
 elif menu_id == 'Conversion Predictor':
-    selected_objective = st.selectbox('Please Choose an Objective', df['Objective'].unique())
     selected_platforms = st.selectbox('Please Choose a Platform Name', df['Platform Name'].unique())
     cost_slider = st.slider(
         'Choose Cost',
