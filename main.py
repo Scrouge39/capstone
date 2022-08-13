@@ -128,7 +128,7 @@ if menu_id == "Marketing Analytics":
     df['Cost per Click'] = df['Costs (USD)']/df['Clicks']
     df['CTR'] = df['Clicks']/df['Impressions']*100
     selected_platforms = st.multiselect('Platform Name', df['Platform Name'].unique(), default='Google Ads')
-    selected_objective = st.selectbox('Campaigne Objective', df['Objective'].unique())
+    selected_objective = st.selectbox('Campaign Objective', df['Objective'].unique())
     with st.container():
         col1, col2 = st.columns(2)
     with col1:
