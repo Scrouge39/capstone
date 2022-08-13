@@ -74,7 +74,7 @@ if menu_id == "Marketing Analytics":
             format="YY-MM"
     )
     with col3:
-        selected_objective = st.selectbox('Objective1', df['Objective'].unique())
+        selected_objective = st.selectbox('Objective', df['Objective'].unique())
     start_date = date_range[0].date()
     end_date = date_range[1].date()
     df['Reach'] = df['Reach'].apply(lambda x: float(x))
@@ -128,7 +128,7 @@ if menu_id == "Marketing Analytics":
     df['Cost per Click'] = df['Costs (USD)']/df['Clicks']
     df['CTR'] = df['Clicks']/df['Impressions']*100
     selected_platforms = st.multiselect('Platform Name', df['Platform Name'].unique(), default='Google Ads')
-    selected_objective = st.selectbox('Objective2', df['Objective'].unique())
+    selected_objective = st.selectbox('Campaigne Objective', df['Objective'].unique())
     with st.container():
         col1, col2 = st.columns(2)
     with col1:
@@ -244,11 +244,11 @@ elif menu_id == 'Cover Page':
     with st.container():
         col1, col2,col3 = st.columns(3)
         with col2:
-            st.markdown('<h2><b>Digital Marketing Management Tool</b></h2>', unsafe_allow_html=True)
+            st.markdown('<h3><b>Digital Marketing Management Tool</b></h3>', unsafe_allow_html=True)
 
     with st.container():
         col1, col2, col3 = st.columns(3)
     with col2:
         # with col2:
         st.image('ms42.jfif', width = 500)
-        st.markdown('<h3 style="padding-left:7vh">Developed by Karim Al Mourad</h3>', unsafe_allow_html=True)
+        st.markdown('<h4 style="padding-left:7vh">Developed by Karim Al Mourad</h4>', unsafe_allow_html=True)
