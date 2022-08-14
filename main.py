@@ -42,7 +42,7 @@ with col3:
     st.write("              ")
 menu_data = [
     {'id':'Cover Page','label':"Home Page"},
-    {'id':'Marketing Analytics','label':"Customer Analytics"},
+    {'id':'Marketing Analytics','label':"Campaign Analytics"},
     {'id':'Conversion Predictor', 'label':"Conversion Predictor"}]
 over_theme = {'txc_inactive': '#FFF','menu_background':'#B1005D','txc_active':'#B1005D','option_active':'#FFF'}
 menu_id = hc.nav_bar(
