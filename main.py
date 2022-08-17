@@ -13,7 +13,7 @@ import plotly.express as px
 import warnings
 warnings.filterwarnings('ignore')
 # specify the primary menu definition
-st.set_page_config(page_title='Campaign Management Too',layout="wide")
+st.set_page_config(page_title='Digital Marketing Analytics Tool',layout="wide")
 
 
 with st.container():
