@@ -166,7 +166,7 @@ if menu_id == "Marketing Analytics":
             st.plotly_chart(fig)
     with col2:
         if selected_objective == 'Conversions':
-            st.markdown('<h1 style="font-size:125%;">COC by Platform</h1>', unsafe_allow_html=True)
+            st.markdown('<h1 style="font-size:125%;">Cost of Conversions by Platform</h1>', unsafe_allow_html=True)
             filtered_df = df[(df['Platform Name'].isin(selected_platforms))& (df['Objective'] == selected_objective)]
             filtered_df['Date'] = pd.to_datetime(filtered_df['Date'])
             filtered_df["Date"] = filtered_df["Date"].dt.strftime('%Y-%m')
