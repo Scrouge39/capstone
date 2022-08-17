@@ -19,7 +19,7 @@ st.set_page_config(page_title='Digital Marketing Analytics Tool',layout="wide")
 with st.container():
     col1, col2, col3 = st.columns([1,1.5,1])
 with col1:
-    st.image('1.png', width = 300)
+    st.image('1.png', channels="BGR")
 with col2:
     st.write("              ")
 with col3:
