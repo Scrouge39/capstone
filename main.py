@@ -105,7 +105,7 @@ if menu_id == "Marketing Analytics":
     with col4:
         st.metric(label="CPC", value= round(cost_per_click,1))
     with col5:
-        st.metric(label='Cost Per Reach', value= round(coc,1))
+        st.metric(label='Cost Per Conversion', value= round(coc,1))
     with col6:
         st.metric(label='Cost Per Thousands Impressions', value=  "%.6f" % cost_per_imp)
 
@@ -122,7 +122,7 @@ if menu_id == "Marketing Analytics":
     with col5:
         st.metric(label='ROAS', value= round(ROAS,1))
     with col6:
-        st.metric(label='Cost Per Reach', value= "%.6f" % cost_per_reach   )
+        st.metric(label='Cost Per Thousands Reach', value= "%.6f" % cost_per_reach   )
 
     df['Cost per 1000 Impressions'] = df['Costs (USD)']/df['Impressions']*1000
     df['Cost per Click'] = df['Costs (USD)']/df['Clicks']
