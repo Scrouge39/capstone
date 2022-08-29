@@ -170,8 +170,8 @@ if menu_id == "Marketing Analytics":
             filtered_df = df[(df['Platform Name'].isin(selected_platforms))& (df['Objective'] == selected_objective)]
             filtered_df['Date'] = pd.to_datetime(filtered_df['Date'])
             filtered_df["Date"] = filtered_df["Date"].dt.strftime('%Y-%m')
-            filtered_df_4 = filtered_df.groupby(['Date', 'Platform Name'])['Costs (USD)'].sum().reset_index()
-            filtered_df_5 = filtered_df.groupby(['Date', 'Platform Name'])['Purchase'].sum().reset_index()
+            filtered_df_4 = filtered_df.groupby(['Date', 'Platform Name'])['Costs (USD)'].mean().reset_index()
+            filtered_df_5 = filtered_df.groupby(['Date', 'Platform Name'])['Purchase'].mean().reset_index()
             filtered_df_5 = pd.merge(filtered_df_5,filtered_df_4,on='Date')
             filtered_df_5 = filtered_df_5.drop(columns='Platform Name_y')
             filtered_df_5['CPC'] = filtered_df_5['Costs (USD)']/filtered_df_5['Purchase']
